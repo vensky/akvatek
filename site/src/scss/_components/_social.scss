@@ -1,0 +1,39 @@
+.social {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+
+    &__item {
+        display: flex;
+        align-items: flex-end;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url(../img/icon-www.svg);
+            margin-right: 12px;
+        }
+
+        &--tg {
+            &::before {
+                background-image: url(../img/icon-tg.svg);
+            }
+        }
+
+        &--ig {
+            &::before {
+                background-image: url(../img/icon-ig.svg);
+            }
+        }
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 41px;
+
+        @media (max-width: $mobile) {
+            margin-bottom: 24px;
+        }
+    }
+}

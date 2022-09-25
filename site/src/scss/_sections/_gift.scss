@@ -1,0 +1,113 @@
+.gift {
+    padding-bottom: 300px;
+    background-image: url(../img/gift-bg.png);
+    background-position: 100% 0%;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 30px;
+        background-position: 50% 0%;
+        background-size: contain;
+        padding-bottom: 0;
+    }
+
+    &__title {
+        font-family: $font-family-title;
+        color: $blue;
+        font-size: 60px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 80px;
+        text-align: center;
+
+        @media (max-width: $tablet) {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__subtitle {
+        font-family: $font-family-title;
+        color: $orange;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 80px;
+
+        @media (max-width: $tablet) {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-bottom: 28px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 70px;
+        padding-right: 50px;
+
+        @media (max-width: $tablet) {
+            flex-direction: column-reverse;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+    }
+
+    &__text {
+        padding-top: 122px;
+
+        @media (max-width: $tablet) {
+            padding-top: 33px;
+        }
+
+        time {
+            display: block;
+            font-family: $font-family-title;
+            padding: 12px 24px;
+            font-size: 24px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+            line-height: 1.4;
+            background-color: $blue;
+            color: $white;
+            width: fit-content;
+            text-transform: uppercase;
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 18px;
+            }
+        }
+
+        p {
+            font-family: $font-family-title;
+            font-size: 30px;
+            line-height: 1.4;
+            text-transform: uppercase;
+            color: $blue;
+            max-width: 372px;
+
+            @media (max-width: $tablet) {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__img {
+        flex-shrink: 0;
+
+        @media (max-width: $tablet) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+ .button {
+
+    @include button;
+
+    padding: 24px 40px;
+    font-family: $font-family-title;
+    color: $white;
+    line-height: 1;
+    transition: color $transition, background $transition;
+    border-radius: 100px;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+
+    overflow: hidden;
+    background: none;
+    position: relative;
+
+    &:hover {
+        background: linear-gradient(280.81deg, #87009D 14.4%, #8571FF 67.21%);
+
+        @media (hover) {
+            &::before {
+                opacity: 0;
+            }
+        }
+    }
+
+    &:active {
+        &::before,
+        &::after {
+            opacity: 0;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity $transition;
+    }
+
+    &::before {
+        background: linear-gradient(273.76deg, #FF994F 6.12%, #C059FF 96.64%);
+        z-index: 1;
+    }
+
+    &::after {
+        background: linear-gradient(273.76deg, #A736FF 6.12%, #FF8C8C 96.64%);
+        z-index: 0;
+    }
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+}

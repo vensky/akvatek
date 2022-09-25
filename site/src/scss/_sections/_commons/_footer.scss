@@ -1,0 +1,115 @@
+.footer {
+    margin-top: 40px;
+    font-weight: 400;
+
+    @media (max-width: $tablet) {
+        margin-top: 10px;
+    }
+
+    &__body {
+        background: linear-gradient(201.38deg, #EAFCFF 3.05%, rgba(247, 245, 255, 0.3) 85.93%);
+        border-radius: 40px;
+        padding: 50px 40px;
+
+        @media (max-width: $tablet) {
+            padding: 27px 15px 30px;
+            border-radius: 30px;
+        }
+    }
+
+    &__top {
+        display: flex;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -24px;
+
+        @media (max-width: $laptop) {
+            margin-top: 20px;
+        }
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+        }
+    }
+
+    &__logo {
+        .logo__img {
+            @media (max-width: $tablet) {
+                width: 141px;
+                height: 47px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__social {
+        margin-left: 202px;
+
+        @media (max-width: $tablet) {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__copy {
+        margin-right: auto;
+
+        @media (max-width: $tablet) {
+            margin-left: auto;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    &__policy {
+        margin-right: 93px;
+
+        @media (max-width: $tablet) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__note {
+        display: none;
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 1.3;
+        margin: 15px auto 0;
+        text-align: center;
+
+        @media (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    &__button {
+        display: none;
+        font-size: 16px;
+        position: fixed;
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        transition: bottom $transition;
+        padding: 20px 32px;
+
+        @media (max-width: $tablet) {
+            display: flex;
+        }
+
+        &--scroll {
+            bottom: 16px;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 0;
+    z-index: 10;
+    transition: background $transition;
+
+    @media (max-width: $mobile) {
+        padding: 16px 0;
+    }
+
+    &--scroll {
+        background: #fff;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__tel {
+        font-family: $font-family-title;
+        font-size: 28px;
+        line-height: 1.2;
+        // margin-right: 32px;
+
+        @media (max-width: $mobile) {
+            font-size: 16px;
+        }
+    }
+
+    &__button {
+        background: transparent;
+        border: 2px solid #463672;
+        font-size: 14px;
+        color: #463672;
+        padding: 18px 28px;
+        margin-left: 32px;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        &:hover,
+        &:active {
+            background: #463672;
+            color: #fff;
+        }
+    }
+}
