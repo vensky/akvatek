@@ -1,3 +1,0 @@
-MicroModal.init({
-    disableFocus: true,
-});
